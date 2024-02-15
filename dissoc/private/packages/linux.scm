@@ -1,4 +1,4 @@
-(define-module (dissoc nongnu packages linux)
+(define-module (dissoc private packages linux)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (gnu packages algebra)
   #:use-module (gnu packages bison)
@@ -16,9 +16,7 @@
   #:use-module (guix gexp)
   #:use-module (guix packages)
   #:use-module (guix utils)
-  #:use-module (ice-9 match)
-
-  )
+  #:use-module (ice-9 match))
 
 
 ;; Many of the packages in this module are custom linux

@@ -263,4 +263,3 @@
 Linux kernel.  It has been modified to remove all non-free binary blobs.")
    (license license:gpl2)
    (properties '((max-silent-time . 10800)))))
-linux-bpf-sched-ext

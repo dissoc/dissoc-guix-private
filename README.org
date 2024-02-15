@@ -1,0 +1,30 @@
+#+TITLE:     dissoc-guix-private
+#+SUBTITLE:  customized packages and services for guix
+#+AUTHOR:    Justin Bishop
+#+DESCRIPTION: contains packages and services to be used as a channel with guix
+#+KEYWORDS: guix, packages, services, linux, bpf
+#+LANGUAGE:  en
+
+* Summary
+dissoc-guix-private are packages and services that are mostly for testing and
+personal use. It may break your system and changes to packages or services
+may be frequent. Use with caution.
+
+Warning: Non-free software may be included in this repository.
+
+* Installation
+Add the channel to the file: ~/.config/guix/channels.scm
+If the file does not exist it may need to be created.
+#+begin_src scheme :eval no
+(append %default-channels
+        (list (channel
+               (name 'dissoc-guix-private)
+               (url "https://github.com/dissoc/dissoc-guix-private.git")
+               (branch "main")
+               (introduction
+                (make-channel-introduction
+                 "572f3b4f9bcb19a4c917d459506fcb60e760018e"
+                 (openpgp-fingerprint
+                  "95D3 7A96 EC54 79CE 6082  5831 81FF 5EC7 66ED 8C39"))))
+              ...))
+#+end_src
